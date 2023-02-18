@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    body{
+    width:100%;
+    height:100vh;
+    background-color: aqua;
+    display:flex;
+    }
+    .cloud{
+        width:400px;
+        height: 100px;
+        background-color: #b0aaaa;
+        border-radius: 60px;
+        margin:auto;
+        position: relative;
+    }
+    .cloud::after{
+      content: "";
+      width: 100%;
+      height: 10px;
+      background-color: #2b2b2b;
+      border-radius: 50%;
+      position: absolute;
+      bottom:-180px;
+    }
+    .clouds{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    background-color: #b0aaaa;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    }
+    .clouds::after{
+        content: "";
+        width: 130px;
+        height: 130px;
+        background-color: #b0aaaa;
+        position: absolute;
+        left: 90px;
+        top: -20px;
+        border-radius: 50%;
+    }
+    .rain{
+      display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    }
+    .rain span{
+        width: 15px;
+        height: 15px;
+        margin:0 5px;
+        background-color: rgb(252, 253, 253);
+        border-radius: 50%;
+       animation: yu linear 2s infinite ;
+    }
+    .clock {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 10px;
+        bottom: 10px;
+        background-color: #b0aaaa;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .clock p {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background-clip: text;
+        -webkit-background-clip: text;
+        z-index: 999;
+        position: absolute;
+    }
+    @keyframes yu{
+        0%{
+            transform: translateY(0) scale(0);
+        }
+        100%{
+            transform: translateY(170px) scale(1);
+        }
+    }
+    
+    
